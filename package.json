@@ -1,0 +1,20 @@
+{
+  "name": "jwsharpe.github.io",
+  "version": "1.0.0",
+  "description": "personal website",
+  "private": true,
+  "repository": "git@github.com:jwsharpe/jwsharpe.github.io.git",
+  "author": "jwsharpe",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack-dev-server --open"
+  },
+  "dependencies": {
+    "ts-loader": "^7.0.2",
+    "typescript": "^3.8.3",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
+}
