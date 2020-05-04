@@ -12,7 +12,7 @@ module.exports = {
     ],
   },
   devServer: {
-    contentBase: "./dist",
+    contentBase: "./",
   },
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
