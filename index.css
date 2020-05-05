@@ -4,15 +4,19 @@
   }
   @font-face {
     font-family: Lora;
-    src: url(./dist/Lora-Regular.ttf);
+    src: url(./dist/Lora-Bold.ttf);
   }
 
 h3 {
+    font-size: inherit;
     font-family: 'Lora';
+    letter-spacing: 2px;
     margin: 15vh 30vw 0 10vw;
 }
 body {
+    font-size: 1.7rem;
+    line-height: 2.5rem;
     margin: 0;
-    background: #fff8e1;
-    color: #212121;
+    background: #ffa726;
+    color: #121212;
 }
