@@ -1,15 +1,6 @@
-@font-face {
-    font-family: Raleway;
-    src: url(./dist/Raleway-Regular.ttf);
-  }
-  @font-face {
-    font-family: Lora;
-    src: url(./dist/Lora-Bold.ttf);
-  }
-
 h3 {
     font-size: inherit;
-    font-family: 'Lora';
+    font-family: 'Lora', serif;
     letter-spacing: 2px;
     margin: 15vh 30vw 0 10vw;
 }

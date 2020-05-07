@@ -1,7 +1,4 @@
-// function component(): Element {
-//     const element = document.createElement('div');
-//     element.innerHTML = _.join(['hasdfi', 'world'], ' ');
-//     return element;
-//   }
-  
-  // document.body.innerText = ' hi';
+const img: any = new Image()
+img.src = "https://backend-jwsharpe.herokuapp.com/pageview";
+img.style = "position: absolute; left: -100px; right: -100px;"
+img.onload = function () { document.appendChild(img); };
