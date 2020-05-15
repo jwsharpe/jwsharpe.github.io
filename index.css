@@ -1,13 +1,38 @@
-h3 {
-    font-size: inherit;
+
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #121212;
+}
+div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    height: 50vh;
+    min-height: 320px;
+    margin: 2vh;
+}
+h1 {
     font-family: 'Lora', serif;
     letter-spacing: 2px;
-    margin: 15vh 30vw 0 10vw;
-}
-body {
-    font-size: 1.7rem;
-    line-height: 2.5rem;
+    font-size: max(2vh,14px);
     margin: 0;
-    background: #ffa726;
-    color: #121212;
+}
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+a {
+    font-family: 'Raleway', serif;
+    letter-spacing: 1px;
+    font-size: max(2vh,12px); 
 }
