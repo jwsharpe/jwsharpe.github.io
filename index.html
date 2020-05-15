@@ -23,6 +23,55 @@
     />
     <link rel="manifest" href="public/site.webmanifest" />
     <style>
+      body {
+        margin: 0;
+        height: 98vh;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        user-select: none;
+        color: #121212;
+        background: #fafafa;
+      }
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 48px;
+        box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.2);
+        background: #ffffff;
+        z-index: 1;
+      }
+      h1 {
+        font-family: "Lora", serif;
+        letter-spacing: 2px;
+        font-size: max(2vh, 14px);
+        margin: 48px 0 16px 0;
+      }
+      footer {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 16px;
+        margin-bottom: 48px;
+      }
+      p {
+        margin: 0;
+        position: absolute;
+        font-size: 40vh;
+        text-align: center;
+        line-height: 0.8;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+        z-index: 0;
+        opacity: 0.02;
+        left: 0;
+        top: 0;
+      }
       a {
         font-family: "Raleway", serif;
         letter-spacing: 1px;
@@ -52,75 +101,21 @@
       rel="stylesheet"
     />
   </head>
-  <body
-    style="
-      margin: 0;
-      height: 98vh;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      user-select: none;
-      color: #121212;
-      background: #fafafa;
-    "
-  >
-    <div
-      style="
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 0 48px;
-        box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.2);
-        background: #ffffff;
-        z-index: 1;
-      "
-    >
-      <h1
-        style="
-          font-family: 'Lora', serif;
-          letter-spacing: 2px;
-          font-size: max(2vh, 14px);
-          margin: 48px 0 16px 0;
-        "
-      >
+  <body>
+    <div>
+      <h1>
         hi, welcome to my website :)
       </h1>
       <img
         style="height: 50vh; min-height: 320px; margin: 2vh;"
         src="/public/flower.jpg"
       />
-      <footer
-        style="
-          width: 100%;
-          display: flex;
-          justify-content: space-evenly;
-          margin-top: 16px;
-          margin-bottom: 48px;
-        "
-      >
+      <footer>
         <a href="https://github.com/jwsharpe">_github</a
         ><a href="https://twitter.com/jws_dev">_twitter</a>
       </footer>
     </div>
-    <p
-      style="
-        margin: 0;
-        position: absolute;
-        font-size: 40vh;
-        text-align: center;
-        line-height: 0.8;
-        height: 100vh;
-        width: 100vw;
-        overflow: hidden;
-        z-index: 0;
-        opacity: 0.02;
-        left: 0;
-        top: 0;
-      "
-    >
+    <p>
       james wright sharpe
     </p>
   </body>
