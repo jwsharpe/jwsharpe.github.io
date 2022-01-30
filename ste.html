@@ -23,24 +23,29 @@
   <body>
     <main id="VideoFrame" style="height: 100vh"></main>
     <script type="text/javascript">
-      (function (open) {
-        XMLHttpRequest.prototype.open = function (
+      XMLHttpRequest.prototype.open = function (
+        method,
+        url,
+        async,
+        user,
+        pass
+      ) {
+        var rewrittenUrl = url;
+        if (url.indexOf("svc.nhl") != -1) {
+          rewrittenUrl = url.replace(
+            "https://mf.svc.nhl.com/",
+            "https://cdn.streameast.xyz/"
+          );
+        }
+        XMLHttpRequest.prototype.open.call(
+          this,
           method,
-          url,
+          rewrittenUrl,
           async,
           user,
           pass
-        ) {
-          var rewrittenUrl = url;
-          if (url.indexOf("svc.nhl") != -1) {
-            rewrittenUrl = url.replace(
-              "https://mf.svc.nhl.com/",
-              "https://cdn.streameast.xyz/"
-            );
-          }
-          open.call(this, method, rewrittenUrl, async, user, pass);
-        };
-      })(XMLHttpRequest.prototype.open);
+        );
+      };
 
       const params = new URLSearchParams(window.location.search);
       const url = params.get("clappr_src");
