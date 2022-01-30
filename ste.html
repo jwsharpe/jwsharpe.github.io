@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <script
       type="text/javascript"
+      src="https://cdn.streameast.live/v81.js"
+    >
+  </script>
+    <script
+      type="text/javascript"
       src="https://cdn.jsdelivr.net/clappr/latest/clappr.min.js"
     ></script>
     <script
@@ -23,30 +28,6 @@
   <body>
     <main id="VideoFrame" style="height: 100vh"></main>
     <script type="text/javascript">
-      XMLHttpRequest.prototype.open = function (
-        method,
-        url,
-        async,
-        user,
-        pass
-      ) {
-        var rewrittenUrl = url;
-        if (url.indexOf("svc.nhl") != -1) {
-          rewrittenUrl = url.replace(
-            "https://mf.svc.nhl.com/",
-            "https://cdn.streameast.xyz/"
-          );
-        }
-        XMLHttpRequest.prototype.open.call(
-          this,
-          method,
-          rewrittenUrl,
-          async,
-          user,
-          pass
-        );
-      };
-
       const params = new URLSearchParams(window.location.search);
       const url = params.get("clappr_src");
       fetch(url, {
