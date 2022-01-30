@@ -45,7 +45,9 @@
     <script type="text/javascript">
       const params = new URLSearchParams(window.location.search);
       const url = params.get("clappr_src");
-      fetch(url)
+      fetch(url, {
+    referrerPolicy: 'no-referrer',
+  })
         .then((e) => {
           return e.text();
         })
@@ -59,7 +61,6 @@
               e.innerText &&
               e.innerText.includes("source")
           )[0];
-          console.log({ scripts, script });
           txt = script.innerText
             .substring(
               script.innerText.indexOf("{"),
