@@ -1,1 +1,105 @@
-<!DOCTYPE html><html> <head> <meta charset="UTF-8"/> <script type="text/javascript" src="https://cdn.streameast.live/v81.js" ></script> <script type="text/javascript" src="https://cdn.jsdelivr.net/clappr/latest/clappr.min.js" ></script> <script type="text/javascript" src="https://cdn.jsdelivr.net/clappr.level-selector/latest/level-selector.min.js" ></script> <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clappr-stats/dist/clappr-stats.min.js" ></script> <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clappr-nerd-stats/dist/clappr-nerd-stats.min.js" ></script> </head> <body> <main id="VideoFrame" style="height: 100vh"></main> <script type="text/javascript">const params=new URLSearchParams(window.location.search); const url=params.get("clappr_src"); fetch(url) .then((e)=>{return e.text();}) .then((html)=>{const parser=new DOMParser(); const doc=parser.parseFromString(html, "text/html"); const scripts=[...doc.querySelectorAll("script")]; const script=scripts.filter( (e)=> e.type==="text/javascript" && e.innerText && e.innerText.includes("source") )[0]; txt=script.innerText .substring( script.innerText.indexOf("{"), script.innerText.indexOf("}") - 1 ) .substring(9); window.data={source: txt}; player=new Clappr.Player({source: data.source, mimeType: "application/x-mpegURL", width: "100%", height: "100%", autoPlay: true, crossOrigin: true, flushLiveURLCache: false, plugins: [LevelSelector, ClapprStats, ClapprNerdStats], hlsjsConfig:{xhrSetup: function (xhr, url){xhr.withCredentials=false;},}, clapprNerdStats:{shortcut: ["s"],}, playbackConfig:{crossorigin: "use-credentials",}, parentId: "#VideoFrame",});}); </script> <style type="text/css"> body{margin: 0;}main{display: flex; flex-direction: column; height: 100vh; justify-content: center; background: rgb(0, 0, 0);}</style> </body></html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/clappr/latest/clappr.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/clappr.level-selector/latest/level-selector.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/clappr-stats/dist/clappr-stats.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/clappr-nerd-stats/dist/clappr-nerd-stats.min.js"
+    ></script>
+  </head>
+
+  <body>
+    <main id="VideoFrame" style="height: 100vh"></main>
+    <script type="text/javascript">
+      (function (open) {
+        XMLHttpRequest.prototype.open = function (
+          method,
+          url,
+          async,
+          user,
+          pass
+        ) {
+          var rewrittenUrl = url;
+          if (url.indexOf("svc.nhl") != -1) {
+            rewrittenUrl = url.replace(
+              "https://mf.svc.nhl.com/",
+              "https://cdn.streameast.xyz/"
+            );
+          }
+          open.call(this, method, rewrittenUrl, async, user, pass);
+        };
+      })(XMLHttpRequest.prototype.open);
+
+      const params = new URLSearchParams(window.location.search);
+      const url = params.get("clappr_src");
+      fetch(url, {
+        mode: "no-cors", // no-cors, *cors, same-origin
+        cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+        credentials: "omit", // include, *same-origin, omit
+      })
+        .then((e) => {
+          return e.text();
+        })
+        .then((html) => {
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(html, "text/html");
+          const scripts = [...doc.querySelectorAll("script")];
+          const script = scripts.filter(
+            (e) =>
+              e.type === "text/javascript" &&
+              e.innerText &&
+              e.innerText.includes("source")
+          )[0];
+          txt = script.innerText
+            .substring(
+              script.innerText.indexOf("{"),
+              script.innerText.indexOf("}") - 1
+            )
+            .substring(9);
+          window.data = { source: txt };
+          player = new Clappr.Player({
+            source: data.source,
+            mimeType: "application/x-mpegURL",
+            width: "100%",
+            height: "100%",
+            autoPlay: true,
+            crossOrigin: true,
+            flushLiveURLCache: false,
+            plugins: [LevelSelector, ClapprStats, ClapprNerdStats],
+            hlsjsConfig: {
+              xhrSetup: function (xhr, url) {
+                xhr.withCredentials = false;
+              },
+            },
+            clapprNerdStats: { shortcut: ["s"] },
+            playbackConfig: { crossorigin: "use-credentials" },
+            parentId: "#VideoFrame",
+          });
+        });
+    </script>
+    <style type="text/css">
+      body {
+        margin: 0;
+      }
+      main {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: center;
+        background: rgb(0, 0, 0);
+      }
+    </style>
+  </body>
+</html>
