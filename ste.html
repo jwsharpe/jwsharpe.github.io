@@ -46,6 +46,7 @@
       const params = new URLSearchParams(window.location.search);
       const url = params.get("clappr_src");
       fetch(url, {
+        cors: 'no-cors',
     referrerPolicy: 'no-referrer',
   })
         .then((e) => {
@@ -61,6 +62,7 @@
               e.innerText &&
               e.innerText.includes("source")
           )[0];
+          console.log({ scripts, script });
           txt = script.innerText
             .substring(
               script.innerText.indexOf("{"),
