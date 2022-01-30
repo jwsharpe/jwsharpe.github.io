@@ -2,11 +2,26 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <script
-      type="text/javascript"
-      src="https://cdn.streameast.live/v81.js"
-    >
-  </script>
+    <script type="text/javascript">
+      (function (open) {
+        XMLHttpRequest.prototype.open = function (
+          method,
+          url,
+          async,
+          user,
+          pass
+        ) {
+          var rewrittenUrl = url;
+          if (url.indexOf("svc.nhl") != -1) {
+            rewrittenUrl = url.replace(
+              "https://mf.svc.nhl.com/",
+              "https://cdn.streameast.xyz/"
+            );
+          }
+          open.call(this, method, rewrittenUrl, async, user, pass);
+        };
+      })(XMLHttpRequest.prototype.open);
+    </script>
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/clappr/latest/clappr.min.js"
@@ -30,11 +45,7 @@
     <script type="text/javascript">
       const params = new URLSearchParams(window.location.search);
       const url = params.get("clappr_src");
-      fetch(url, {
-        mode: "no-cors", // no-cors, *cors, same-origin
-        cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
-        credentials: "omit", // include, *same-origin, omit
-      })
+      fetch(url)
         .then((e) => {
           return e.text();
         })
@@ -48,6 +59,7 @@
               e.innerText &&
               e.innerText.includes("source")
           )[0];
+          console.log({ scripts, script });
           txt = script.innerText
             .substring(
               script.innerText.indexOf("{"),
