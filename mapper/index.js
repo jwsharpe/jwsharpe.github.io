@@ -169,7 +169,7 @@ const askConfirm = () => {
 
 
 const onKeydown = event => {
-    const char = event.key;
+    const char = event.key.toLowerCase();
 
     if (char == 'r' || confirmReset) {
         if (!confirmReset) {
