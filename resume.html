@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>jwsharpe</title>
+    <title>Sharpe Resume</title>
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -139,6 +139,18 @@
       .resume-item:first-of-type {
         padding-top: 0px;
       }
+
+      #name {
+        flex-direction: row;
+        display: flex;
+        align-items: center;
+      }
+      .pronouns {
+        margin-top: 6px;
+        margin-left: 0.5rem;
+        font-size: 1rem;
+        color: #808080;
+      }
     </style>
   </head>
 
@@ -146,8 +158,10 @@
     <div id="resume-container">
       <header id="main">
         <div id="header-left">
-          <h1 id="name">James Wright Sharpe</h1>
-          <h3 class="description">Software Engineer</h3>
+          <h1 id="name">
+            James Sharpe <span class="pronouns">(he/them)</span>
+          </h1>
+          <h3 class="description">Software Engineer - Distributed Services</h3>
         </div>
         <div id="header-right">
           <h4>(570) 415-8673</h4>
@@ -170,14 +184,13 @@
         <h5>CAREER PROFILE</h5>
         <ul>
           <li>
-            <b>4+ years in startups, 4 years in software development.</b> Used
+            <b>5+ years in software development, 4+ years in startups.</b> Used
             to wearing many hats, want to continue to work in places where the
             work I do is impactful.
           </li>
           <li>
             <b>Data driven and fascinated with software architecture</b> have
-            led 5+ large projects designing software architecture to increase
-            operational value.
+            led 5+ large projects and setup reliable distributed systems.
           </li>
           <li>
             <b>Published Mathematician</b> have published an essay in the
@@ -191,8 +204,31 @@
         <div class="resume-item">
           <div class="title-item">
             <h6>
-              Software Engineer (Integrations) 
-              <span>- Attentive</span>
+              Software Engineer (User Identity)
+              <span>- Squarespace</span>
+            </h6>
+            <p>10/2023 - Present</p>
+          </div>
+          <ul>
+            <li>
+              Developed and maintained self-service user deletion endpoints,
+              achieving 99.99% uptime (four nines availability).
+            </li>
+            <li>
+              Successfully led zero-downtime migrations of critical core
+              identity services.
+            </li>
+            <li>
+              Served as subject matter expert for core services and performed
+              incident commander duties.
+            </li>
+          </ul>
+        </div>
+        <div class="resume-item">
+          <div class="title-item">
+            <h6>
+              Software Engineer (Integrations)
+              <span>- Attentive Mobile</span>
             </h6>
             <p>03/2021 - 01/2023</p>
           </div>
@@ -216,8 +252,8 @@
         <div class="resume-item">
           <div class="title-item">
             <h6>
-              Software Engineer (Client Solutions) 
-              <span>- Attentive</span>
+              Software Engineer (Client Solutions)
+              <span>- Attentive Mobile</span>
             </h6>
             <p>03/2020 - 03/2021</p>
           </div>
@@ -262,17 +298,6 @@
       </div>
       <div>
         <h5>EDUCATION</h5>
-        <div class="resume-item">
-          <div class="title-item">
-            <h6>Flatiron School</h6>
-          </div>
-          <p>Software Engineer Immersive Program Student</p>
-          <ul>
-            <li>
-		    16-week immersive software engineering program based in New York, centered on full-stack development using Ruby on Rails, TypeScript, React, and Postgres.
-            </li>
-          </ul>
-        </div>
         <div class="resume-item">
           <div class="title-item">
             <h6>Bloomsburg University of Pennsylvania</h6>
