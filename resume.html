@@ -406,7 +406,7 @@
           <h1 id="name">
             James Sharpe <span class="pronouns">(he/them)</span>
           </h1>
-          <h3 class="description">Software Engineer — Distributed Services</h3>
+          <h3 class="description">Full Stack Software Engineer — Identity &amp; Distributed Systems</h3>
         </div>
         <div id="header-right">
           <h4>New York, New York</h4>
@@ -427,19 +427,19 @@
         <h5>Career Profile</h5>
         <ul>
           <li>
-            <b>7+ years building production software, 4+ at high-growth startups.</b>
-            Platform and product engineering across identity, integrations, and
-            client-facing systems.
+            <b>7+ years building production software, end to end.</b>
+            Java, TypeScript, and React across identity, integrations, and
+            client-facing systems, at Squarespace and Attentive.
           </li>
           <li>
-            <b>Re-architected distributed systems at scale</b> — account and
-            identity platform work at Squarespace and event pipeline work at
-            Attentive.
+            <b>Technical lead on distributed systems at scale</b> — authored
+            RFCs, led service migrations, and owned API contracts for account
+            and identity platforms serving tens of millions of requests/day;
+            re-architected event pipelines at Attentive.
           </li>
           <li>
-            <b>Published Mathematician.</b> Essay in the prestigious American
-            Mathematical Monthly. Drawn to problems where rigor and engineering
-            both matter.
+            <b>Published in the American Mathematical Monthly.</b> Drawn to
+            problems where rigor and engineering both matter.
           </li>
         </ul>
       </section>
@@ -448,31 +448,41 @@
         <div class="resume-item">
           <div class="title-item">
             <h6>
-              Software Engineer <span class="role-subtitle">(User Identity)</span>
+              Full Stack Software Engineer <span class="role-subtitle">(User Identity)</span>
               <span class="company">Squarespace</span>
             </h6>
             <p class="dateline">Oct 2023 – Present</p>
           </div>
           <ul>
             <li>
-              Authored the DMA RFC unifying self-service account deletion across
-              services, including user data not previously synced. Owned the
-              deletion pipeline end-to-end; maintained 99.99% uptime on deletion
-              endpoints.
+              Authored the RFC and drove Delete My Account (DMA) end to end,
+              unifying permanent account deletion across many products,
+              including user data not previously synced. Owned the backend
+              deletion pipeline (99.99% uptime on deletion endpoints) and
+              worked with design to consolidate the frontend into a single
+              panel in the account service.
             </li>
             <li>
               Led migration of 50+ account-service endpoints from Jersey to
-              Spring MVC, serving 30M+ requests/day for Squarespace’s core
-              account product.
+              Spring MVC (30M+ requests/day), retiring tech debt in a service
+              relied on by many teams. Used AI skills to run end-to-end
+              verification and testing; cut over with zero downtime apart from
+              a single endpoint failure.
             </li>
             <li>
-              IC on Account History backend–frontend integration; owned API
-              contracts between services for a surface handling 15M requests/day.
+              Contributed to the MCP skill that became the foundation for
+              Squarespace’s Forma project: modified the endpoint listing all of
+              a user’s websites and built JWT authentication for the account
+              service and the public internet.
+            </li>
+            <li>
+              Owned API contracts between services for the Account History
+              backend–frontend integration, a surface handling 15M requests/day.
               Coached a frontend engineer on scoping backend work into 10+
               implementation tickets.
             </li>
             <li>
-              Primary SME for core identity services; served as incident
+              Primary subject-matter expert for core identity services; incident
               commander on production incidents.
             </li>
           </ul>
@@ -559,6 +569,14 @@
             </li>
           </ul>
         </div>
+      </section>
+      <section class="resume-section">
+        <h5>Skills</h5>
+        <ul>
+          <li><b>Languages &amp; frameworks:</b> Java, Spring MVC, Jersey, TypeScript, React</li>
+          <li><b>Data:</b> PostgreSQL, MongoDB, CockroachDB</li>
+          <li><b>AI tooling:</b> Claude, MCP</li>
+        </ul>
       </section>
     </div>
   </body>
