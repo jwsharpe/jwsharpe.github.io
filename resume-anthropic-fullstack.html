@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sharpe Resume</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="public/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="public/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="public/favicon-16x16.png"
+    />
+    <link rel="manifest" href="public/site.webmanifest" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      html {
+        font-size: 14px;
+      }
+
+      body {
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        min-height: 100vh;
+        margin: 0;
+        padding: 1rem 0.875rem 2rem;
+        background: #fafaf8;
+        font-family: "Lora", serif;
+        line-height: 1.4;
+        color: #121212;
+        font-variant-numeric: oldstyle-nums;
+      }
+
+      #resume-container {
+        width: 100%;
+        max-width: 50rem;
+        padding: 0;
+        background: white;
+      }
+
+      header {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding-bottom: 0.75rem;
+        margin-bottom: 1rem;
+        border-bottom: 1px solid #121212;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 1.43rem;
+        line-height: 1.2;
+        font-weight: normal;
+      }
+
+      h1 a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      h1 a:hover,
+      h4 a:hover {
+        text-decoration: underline;
+      }
+
+      h3 {
+        margin: 0.15em 0 0;
+        font-size: 1em;
+        font-weight: normal;
+        font-style: italic;
+      }
+
+      h4,
+      .dateline,
+      h6 .company {
+        font-size: 0.93em;
+        font-weight: normal;
+        margin: 0;
+        line-height: 1.3;
+      }
+
+      .dateline,
+      h6 .company {
+        color: #444;
+      }
+
+      h4 a {
+        color: inherit;
+      }
+
+      h5 {
+        margin: 0 0 0.35em;
+        font-size: 0.78em;
+        font-weight: normal;
+        font-variant: small-caps;
+        letter-spacing: 0.1em;
+      }
+
+      .resume-section:not(:first-of-type) > h5 {
+        margin-top: 1.25rem;
+        padding-top: 0.85rem;
+        border-top: 1px solid #d4d4d4;
+      }
+
+      h6 {
+        margin: 0;
+        font-size: 1em;
+        font-weight: 600;
+      }
+
+      h6 .role-subtitle {
+        font-style: italic;
+        font-weight: normal;
+      }
+
+      h6 .company {
+        display: block;
+      }
+
+      ul {
+        list-style: none;
+        margin-block: 0;
+        padding-inline-start: 0;
+      }
+
+      li {
+        padding-left: 1.15em;
+        text-indent: -1.15em;
+      }
+
+      li + li {
+        margin-top: 0.25em;
+      }
+
+      li b,
+      .resume-section--profile li b {
+        font-weight: 600;
+      }
+
+      .title-item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.1rem;
+      }
+
+      .resume-item > ul {
+        margin-top: 0.2em;
+      }
+
+      .resume-item > ul li {
+        font-size: 0.9em;
+        color: #3a3a3a;
+        line-height: 1.38;
+      }
+
+      .resume-item {
+        padding-top: 0.5rem;
+      }
+
+      .resume-item:first-of-type {
+        padding-top: 0;
+      }
+
+      .resume-item > p {
+        margin-top: 0.125em;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      #name {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        gap: 0.15em 0.35em;
+      }
+
+      .pronouns {
+        font-size: 0.72em;
+        line-height: 1;
+        color: #808080;
+      }
+
+      @media (min-width: 760px) {
+        html {
+          font-size: 16px;
+        }
+
+        body {
+          line-height: 1.35;
+          padding: 2rem;
+          padding-top: 4rem;
+          padding-bottom: 6rem;
+          background: #fafaf8;
+        }
+
+        #resume-container {
+          background: white;
+          padding: 2rem;
+          padding-bottom: 3rem;
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        header {
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: flex-start;
+          gap: 1rem;
+          padding-bottom: 0.85rem;
+          margin-bottom: 1.25rem;
+        }
+
+        #header-right {
+          text-align: right;
+        }
+
+        h1 {
+          font-size: 1.625rem;
+        }
+
+        h3 {
+          margin-top: 0.35em;
+        }
+
+        h4 {
+          line-height: 1.5;
+        }
+
+        .resume-section:not(:first-of-type) > h5 {
+          margin-top: 1.5rem;
+          padding-top: 1rem;
+        }
+
+        .title-item {
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: baseline;
+          flex-wrap: wrap;
+          gap: 0.75rem 1.5rem;
+        }
+
+        h6 .company {
+          display: inline;
+          color: inherit;
+          font-size: inherit;
+        }
+
+        h6 .company::before {
+          content: " \2014 ";
+        }
+
+        .dateline {
+          flex-shrink: 0;
+          white-space: nowrap;
+        }
+
+        .resume-item {
+          padding-top: 0.75rem;
+        }
+
+        .resume-item > p {
+          margin-top: 0.25em;
+        }
+
+        li + li {
+          margin-top: 0.35em;
+        }
+      }
+
+      @media print {
+        @page {
+          size: letter;
+          margin: 0.55in;
+        }
+
+        html {
+          font-size: 10pt;
+        }
+
+        body {
+          display: block;
+          min-height: auto;
+          padding: 0;
+          background: white;
+          line-height: 1.3;
+          color: #000;
+        }
+
+        #resume-container {
+          max-width: none;
+          padding: 0;
+          box-shadow: none;
+        }
+
+        header {
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: flex-start;
+          gap: 1.5rem;
+          padding-bottom: 0.7em;
+          margin-bottom: 1.4em;
+          border-bottom: 1px solid #000;
+        }
+
+        #header-right {
+          text-align: right;
+        }
+
+        h1 {
+          font-size: 1.5rem;
+        }
+
+        h3 {
+          font-size: 1.05em;
+        }
+
+        h5 {
+          margin-bottom: 0.6em;
+        }
+
+        .resume-section:not(:first-of-type) > h5 {
+          margin-top: 1.2em;
+          padding-top: 1em;
+          border-top: 1px solid #bbb;
+        }
+
+        .title-item {
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: baseline;
+          gap: 1rem;
+        }
+
+        h6 .company {
+          display: inline;
+          color: inherit;
+          font-size: inherit;
+        }
+
+        h6 .company::before {
+          content: " \2014 ";
+        }
+
+        .dateline {
+          white-space: nowrap;
+        }
+
+        .resume-item > ul li {
+          color: #222;
+        }
+
+        a {
+          color: inherit !important;
+          text-decoration: none !important;
+        }
+
+        .print-link {
+          display: none !important;
+        }
+
+        .pronouns {
+          color: #444;
+        }
+
+        h5,
+        header,
+        .title-item {
+          break-after: avoid;
+          page-break-after: avoid;
+        }
+
+        .resume-item {
+          break-inside: avoid;
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="resume-container">
+      <header id="main">
+        <div id="header-left">
+          <h1 id="name">
+            James Sharpe <span class="pronouns">(he/them)</span>
+          </h1>
+          <h3 class="description">Full Stack Software Engineer — Account Platforms, Product &amp; AI</h3>
+        </div>
+        <div id="header-right">
+          <h4>New York, New York</h4>
+          <h4>
+            <a href="mailto:jameswrightsharpe@gmail.com"
+              >jameswrightsharpe@gmail.com</a
+            >
+          </h4>
+          <h4>
+            <a href="https://github.com/jwsharpe">github.com/jwsharpe</a>
+          </h4>
+          <h4>
+            <a href="#" class="print-link" onclick="window.print(); return false;"
+              >View as PDF</a
+            >
+          </h4>
+        </div>
+      </header>
+
+      <section class="resume-section resume-section--profile">
+        <h5>Career Profile</h5>
+        <ul>
+          <li>
+            <b>6+ years shipping production software across the stack.</b>
+            Customer-facing account flows at Squarespace and self-service
+            onboarding at Attentive, from API contracts and data models to the
+            UI. TypeScript, React, Java, Python.
+          </li>
+          <li>
+            <b>Owns high-stakes systems end to end, across team lines.</b>
+            Authored RFCs, led live migrations, and served as incident
+            commander for account deletion, authentication, and account APIs
+            serving tens of millions of requests/day.
+          </li>
+          <li>
+            <b>Builds with AI in production.</b> Built the auth and data layer
+            for the MCP skill behind Squarespace’s Forma, wrote Skills for
+            engineers, and used models to run end-to-end testing with verification.
+          </li>
+        </ul>
+      </section>
+      <section class="resume-section">
+        <h5>Experience</h5>
+        <div class="resume-item">
+          <div class="title-item">
+            <h6>
+              Full Stack Software Engineer <span class="role-subtitle">(User Identity)</span>
+              <span class="company">Squarespace</span>
+            </h6>
+            <p class="dateline">Oct 2023 – Nov 2026</p>
+          </div>
+          <ul>
+            <li>
+              Authored the RFC and drove Delete My Account (DMA) end to end,
+              a user-facing feature unifying permanent account deletion across
+              many products, including user data not previously synced. Owned
+              the backend deletion pipeline (99.99% uptime on deletion
+              endpoints) and worked with design to consolidate the frontend
+              into a single panel in the account service.
+            </li>
+            <li>
+              Built JWT authentication between the account service and the
+              public internet, and extended the user-websites endpoint, for the
+              MCP skill that became the foundation of Squarespace’s Forma
+              project.
+            </li>
+            <li>
+              Owned API contracts between services for the Account History
+              backend–frontend integration, a surface handling 15M requests/day.
+              Coached a frontend engineer on scoping backend work into 10+
+              implementation tickets.
+            </li>
+            <li>
+              Led migration of 50+ account-service endpoints from Jersey to
+              Spring MVC (30M+ requests/day), retiring tech debt in a service
+              relied on by many teams. Used AI skills to run end-to-end
+              verification and testing; cut over with zero downtime, with one
+              endpoint regression caught and fixed after cutover.
+            </li>
+            <li>
+              Served as primary subject-matter expert for core identity
+              services and incident commander on production incidents.
+            </li>
+          </ul>
+        </div>
+        <div class="resume-item">
+          <div class="title-item">
+            <h6>
+              Software Engineer <span class="role-subtitle">(Integrations)</span>
+              <span class="company">Attentive Mobile</span>
+            </h6>
+            <p class="dateline">Mar 2021 – Jan 2023</p>
+          </div>
+          <ul>
+            <li>
+              Reduced customer service workload 10% by shipping email
+              integrations that let 100+ clients onboard via self-service.
+            </li>
+            <li>
+              Cut email integration costs 15% by re-architecting an event
+              streamer to eliminate duplicate email events.
+            </li>
+          </ul>
+        </div>
+        <div class="resume-item">
+          <div class="title-item">
+            <h6>
+              Software Engineer <span class="role-subtitle">(Client Solutions)</span>
+              <span class="company">Attentive Mobile</span>
+            </h6>
+            <p class="dateline">Mar 2020 – Mar 2021</p>
+          </div>
+          <ul>
+            <li>
+              Reduced engineering ticket time 20% by building debugging routines
+              and playbooks.
+            </li>
+            <li>
+              Cut client-facing analytics tag load time 50% by redesigning the
+              scraper.
+            </li>
+          </ul>
+        </div>
+        <div class="resume-item">
+          <div class="title-item">
+            <h6>
+              Controls Engineer
+              <span class="company">New Paradigm Controls</span>
+            </h6>
+            <p class="dateline">Jun 2018 – Aug 2019</p>
+          </div>
+          <ul>
+            <li>
+              Took requests directly from clients and built the system end to
+              end for a 5-layer industrial flame laminator, from requirements
+              through the operator UI to deployment, guiding product
+              improvements along the way.
+            </li>
+            <li>
+              Cut engineering time on flame lamination setups 66% by building
+              reusable templates.
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="resume-section">
+        <h5>Education</h5>
+        <div class="resume-item">
+          <div class="title-item">
+            <h6>Bloomsburg University of Pennsylvania</h6>
+          </div>
+          <p>Bachelor of Arts in Mathematics and Minor in Computer Science</p>
+          <ul>
+            <li>
+              Published
+              <i
+                >Sequences Generated by Powers of the kth-order Fibonacci
+                Recurrence Relation</i
+              >
+              in the American Mathematical Monthly (~13% acceptance rate).
+              Presented to 300 students and professors at the Boston National
+              Collegiate Honors Council.
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="resume-section">
+        <h5>Skills</h5>
+        <ul>
+          <li><b>Languages &amp; frameworks:</b> TypeScript, React, Python, Java, Spring MVC, Jersey</li>
+          <li><b>AI tooling:</b> Claude, MCP, Skills, prompt-driven E2E testing</li>
+          <li><b>Identity &amp; authorization:</b> OAuth, SAML SSO, JWT, ReBAC (Zanzibar-style)</li>
+          <li><b>Data &amp; messaging:</b> PostgreSQL, MongoDB, CockroachDB, Kafka</li>
+          <li><b>Cloud &amp; tooling:</b> GCP, AWS, Docker, Kubernetes, Datadog, CI/CD</li>
+        </ul>
+      </section>
+    </div>
+  </body>
+</html>
