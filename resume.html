@@ -319,7 +319,7 @@
           justify-content: space-between;
           align-items: flex-start;
           gap: 1.5rem;
-          padding-bottom: 1em;
+          padding-bottom: 0.7em;
           margin-bottom: 1.4em;
           border-bottom: 1px solid #000;
         }
@@ -406,7 +406,7 @@
           <h1 id="name">
             James Sharpe <span class="pronouns">(he/them)</span>
           </h1>
-          <h3 class="description">Full Stack Software Engineer — Identity, Distributed Systems &amp; AI</h3>
+          <h3 class="description">Full Stack Software Engineer — Account Platforms, Product &amp; AI</h3>
         </div>
         <div id="header-right">
           <h4>New York, New York</h4>
@@ -414,6 +414,9 @@
             <a href="mailto:jameswrightsharpe@gmail.com"
               >jameswrightsharpe@gmail.com</a
             >
+          </h4>
+          <h4>
+            <a href="https://github.com/jwsharpe">github.com/jwsharpe</a>
           </h4>
           <h4>
             <a href="#" class="print-link" onclick="window.print(); return false;"
@@ -427,16 +430,16 @@
         <h5>Career Profile</h5>
         <ul>
           <li>
-            <b>6+ years building production software, end to end.</b>
-            Java, TypeScript, and React across identity and authorization,
-            integrations, and client-facing systems, at Squarespace and
-            Attentive.
+            <b>6+ years shipping production software across the stack.</b>
+            Customer-facing account flows at Squarespace and self-service
+            onboarding at Attentive, from API contracts and data models to the
+            UI. TypeScript, React, Java, Python.
           </li>
           <li>
-            <b>Technical lead on distributed systems at scale</b> — authored
-            RFCs, led service migrations, and owned API contracts for account
-            and identity platforms serving tens of millions of requests/day;
-            re-architected event pipelines at Attentive.
+            <b>Owns high-stakes systems end to end, across team lines.</b>
+            Authored RFCs, led live migrations, and served as incident
+            commander for account deletion, authentication, and account APIs
+            serving tens of millions of requests/day.
           </li>
           <li>
             <b>Builds with AI in production.</b> Built the auth and data layer
@@ -457,10 +460,24 @@
           </div>
           <ul>
             <li>
+              Authored the RFC and drove Delete My Account (DMA) end to end,
+              a user-facing feature unifying permanent account deletion across
+              many products, including user data not previously synced. Owned
+              the backend deletion pipeline (99.99% uptime on deletion
+              endpoints) and worked with design to consolidate the frontend
+              into a single panel in the account service.
+            </li>
+            <li>
               Built JWT authentication between the account service and the
               public internet, and extended the user-websites endpoint, for the
               MCP skill that became the foundation of Squarespace’s Forma
               project.
+            </li>
+            <li>
+              Owned API contracts between services for the Account History
+              backend–frontend integration, a surface handling 15M requests/day.
+              Coached a frontend engineer on scoping backend work into 10+
+              implementation tickets.
             </li>
             <li>
               Led migration of 50+ account-service endpoints from Jersey to
@@ -468,20 +485,6 @@
               relied on by many teams. Used AI skills to run end-to-end
               verification and testing; cut over with zero downtime, with one
               endpoint regression caught and fixed after cutover.
-            </li>
-            <li>
-              Authored the RFC and drove Delete My Account (DMA) end to end,
-              unifying permanent account deletion across many products,
-              including user data not previously synced. Owned the backend
-              deletion pipeline (99.99% uptime on deletion endpoints) and
-              worked with design to consolidate the frontend into a single
-              panel in the account service.
-            </li>
-            <li>
-              Owned API contracts between services for the Account History
-              backend–frontend integration, a surface handling 15M requests/day.
-              Coached a frontend engineer on scoping backend work into 10+
-              implementation tickets.
             </li>
             <li>
               Served as primary subject-matter expert for core identity
@@ -499,12 +502,12 @@
           </div>
           <ul>
             <li>
-              Cut email integration costs 15% by re-architecting an event
-              streamer to eliminate duplicate email events.
-            </li>
-            <li>
               Reduced customer service workload 10% by shipping email
               integrations that let 100+ clients onboard via self-service.
+            </li>
+            <li>
+              Cut email integration costs 15% by re-architecting an event
+              streamer to eliminate duplicate email events.
             </li>
           </ul>
         </div>
@@ -518,12 +521,12 @@
           </div>
           <ul>
             <li>
-              Cut client-facing analytics tag load time 50% by redesigning the
-              scraper.
-            </li>
-            <li>
               Reduced engineering ticket time 20% by building debugging routines
               and playbooks.
+            </li>
+            <li>
+              Cut client-facing analytics tag load time 50% by redesigning the
+              scraper.
             </li>
           </ul>
         </div>
@@ -573,11 +576,11 @@
       <section class="resume-section">
         <h5>Skills</h5>
         <ul>
-          <li><b>Languages &amp; frameworks:</b> Java, Spring MVC, Jersey, TypeScript, React, Python</li>
-          <li><b>Identity &amp; authorization:</b> ReBAC (Zanzibar-style), OAuth, SAML SSO, JWT</li>
-          <li><b>Cloud &amp; tooling:</b> GCP, AWS, Docker, Kubernetes, Datadog, CI/CD</li>
-          <li><b>Data &amp; messaging:</b> PostgreSQL, MongoDB, CockroachDB, Kafka</li>
+          <li><b>Languages &amp; frameworks:</b> TypeScript, React, Python, Java, Spring MVC, Jersey</li>
           <li><b>AI tooling:</b> Claude, MCP, Skills, prompt-driven E2E testing</li>
+          <li><b>Identity &amp; authorization:</b> OAuth, SAML SSO, JWT, ReBAC (Zanzibar-style)</li>
+          <li><b>Data &amp; messaging:</b> PostgreSQL, MongoDB, CockroachDB, Kafka</li>
+          <li><b>Cloud &amp; tooling:</b> GCP, AWS, Docker, Kubernetes, Datadog, CI/CD</li>
         </ul>
       </section>
     </div>
